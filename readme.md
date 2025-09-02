@@ -2,6 +2,16 @@
 
 This repository contains the code and dataset of the ICS 2025 paper "ConTraPh: Contrastive Learning for Parallelization and Performance Optimization".
 
+# Install Virtual Environment and Dependencies
+
+1. run the following command to install Virtual Environment
+   ''python3 -m venv {{environment_name}}''
+2. Activate the virtual environment using the following command
+   ''source {{environment_name}}/bin/activate''
+3. Install the dependencies using the following command.
+   ''pip install -r requirements.txt''
+   
+
 # Reduction Style Detection
 
 1. Download 'dgl-csv-reduction-styles-better.zip'  and 'model-reduction-style-best-model-class-better-30.pt' from https://zenodo.org/records/11003882.
