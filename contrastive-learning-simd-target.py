@@ -18,7 +18,7 @@ from tqdm import tqdm
 fold_split = 1
 
 # dataset = dgl.data.CSVDataset('./dgl-csv-dev-map-all-parallel-patterns')
-dataset_pg = dgl.data.CSVDataset('./dgl-csv-simd-target-mod')
+dataset_pg = dgl.data.CSVDataset('./Datamodels/dgl-csv-simd-target-mod')
 
 
 class RGCN(nn.Module):
@@ -112,7 +112,7 @@ for whole_exp in tqdm(range(fold_split)):
 
     train_dataloader_pg = GraphDataLoader(dataset_pg, shuffle=False, batch_size=100, sampler=train_sampler)
     test_dataloader_pg = GraphDataLoader(dataset_pg, shuffle=False, batch_size=64, sampler=test_sampler)
-    model_pg = torch.load('./Project-2/model-simd-target-best-model-class-better-30.pt')
+    model_pg = torch.load('./ModelCheckpoints/model-simd-target-best-model-class-better-30.pt')
 
     num_correct = 0
     num_tests = 0
