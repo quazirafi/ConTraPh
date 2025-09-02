@@ -15,7 +15,7 @@ import csv
 from tqdm import tqdm
 
 
-dataset_pg = dgl.data.CSVDataset('./dgl-csv-reduction-styles-better')
+dataset_pg = dgl.data.CSVDataset('./Datamodels/dgl-csv-reduction-styles-better')
 
 
 N_split = 40
@@ -110,7 +110,7 @@ for whole_exp in tqdm(range(N_split)):
     train_dataloader_pg = GraphDataLoader(dataset_pg, shuffle=False, batch_size=100, sampler=train_sampler)
     test_dataloader_pg = GraphDataLoader(dataset_pg, shuffle=False, batch_size=64, sampler=test_sampler)
 
-    model_pg = torch.load('./Project-2/model-reduction-style-best-model-class-better-30.pt')
+    model_pg = torch.load('./ModelCheckpoints/model-reduction-style-best-model-class-better-30.pt')
 
 
     num_correct = 0
