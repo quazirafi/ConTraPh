@@ -14,7 +14,7 @@ from torch.utils.data import Subset
 import csv
 from tqdm import tqdm
 
-dataset_pg = dgl.data.CSVDataset('./dgl-csv-scheduling-style')
+dataset_pg = dgl.data.CSVDataset('./Datamodels/dgl-csv-scheduling-style')
 
 N_split = 40
 
@@ -108,7 +108,7 @@ for whole_exp in tqdm(range(N_split)):
     train_dataloader_pg = GraphDataLoader(dataset_pg, shuffle=False, batch_size=100, sampler=train_sampler)
     test_dataloader_pg = GraphDataLoader(dataset_pg, shuffle=False, batch_size=64, sampler=test_sampler)
 
-    model_pg = torch.load('./Project-2/model-scheduling-style-best-model-804-100.pt')
+    model_pg = torch.load('./ModelCheckpoints/model-scheduling-style-best-model-804-100.pt')
 
 
     num_correct = 0
